@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/saluto', function () {
+    $page_title ='Buongiorno';
+    $data = [
+        'title' => $page_title,
+        'name1' => 'Loris',
+        'name2' => 'Luca',
+    ];
+    return view('saluto', $data);
+});
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
